@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0076)http://www.freeclassnotesonline.com/RLC-Series-and-Parallel-Circuits-Lab.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>RLC Series Circuit and RLC Parallel Circuit Lab</title>
+
+<meta name="description" content="
+RLC Series Circuit and RLC Parallel Circuit Lab, Series-Parallel Combinations, Discrete 
+Frequencies, Amplitude and Phase Measurements, DC Circuit Analysis, AC Circuits">
+
+<meta name="keywords" content="
+RLC Series and Parallel Circuits Lab, Analog and Circuits, Course Notes,Tests,Exams,
+Quizs,Labs,Lab Notes,Laboratory Experiments,Class Notes,Courses,Notes,Scientific,
+Science,Engineering,Engineering Course,Engineering Lab,Electronic,Electrical">
+<meta name="rating" content="general">
+<meta http-equiv="language" content="en">
+<link rel="SHORTCUT ICON" href="http://www.freeclassnotesonline.com/freeclassnotesonline.ico">
+<link rel="stylesheet" type="text/css" href="./RLC Series Circuit and RLC Parallel Circuit Lab_files/style_courses_main.css">
+</head><body>
+
+<table border="0" cellpadding="0" cellspacing="10" align="center" style="background-color: #FFFFFF">
+<tbody><tr>
+<td colspan="2" width="980" height="20" style="background-color: #999999"></td>
+</tr>
+<tr>
+<td width="575" align="left" valign="middle"><a href="http://www.freeclassnotesonline.com/"><img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/freeclassnotesonline_logo.jpg" border="0" alt=""></a></td>
+<td align="right" valign="top">
+<div style="margin-left: 10px; margin-right: 10px; margin-top: 0px">
+<a class="nav" href="http://www.freeclassnotesonline.com/">HOME |</a>
+<a class="nav" href="http://seneea.blogspot.com/" target="_blank">BLOG |</a>
+<a class="nav" href="http://www.freeclassnotesonline.com/search-freeclassnotesonline.php">SEARCH |</a>
+<a class="nav" href="http://www.freeclassnotesonline.com/site-map.php">SITE MAP</a>
+</div>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" width="980" height="10" style="background-color: #999999"></td>
+</tr>
+
+<tr>
+<td align="left" valign="middle">
+<img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/ee_header.jpg" border="0" alt="">
+</td>
+
+<td align="left">
+<style type="text/css">
+@import url(http://www.google.com/cse/api/branding.css);
+</style>
+<div class="cse-branding-right" style="background-color:#FFFFFF;color:#000000">
+  <div class="cse-branding-form">
+    <form action="http://www.freeclassnotesonline.com/Free_Class_Notes_Online_Search.html" id="cse-search-box">
+      <div>
+        <input type="hidden" name="cx" value="partner-pub-5800381116861914:mhigld-a0bf">
+        <input type="hidden" name="cof" value="FORID:10">
+        <input type="hidden" name="ie" value="ISO-8859-1">
+        <input type="text" name="q" size="35">
+        <input type="submit" name="sa" value="Search">
+      </div>
+    </form>
+  </div>
+  <div class="cse-branding-logo">
+    <img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/poweredby_FFFFFF.gif" alt="Google">
+  </div>
+  <div class="cse-branding-text">
+    Custom Search
+  </div>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2" width="980" height="5" style="background-color: #999999"></td>
+</tr>
+
+<tr>
+<td colspan="2" align="left">
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td width="5" style="background-color: #999999"></td>
+
+<td align="left" valign="top" width="180" style="background-color: #DDDDDD">
+<div style="margin-bottom: 0px; margin-left: 10px"><img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/index_logo.jpg" border="0" alt=""></div>
+<div class="n11"><a class="nav" href="http://www.freeclassnotesonline.com/">HOME</a></div>
+<div class="n11"><a class="nav" href="http://www.freeclassnotesonline.com/Electrical-Engineering.php">COURSES</a></div>
+<div class="n21"><a class="nav" href="http://www.freeclassnotesonline.com/AC-Circuit-Analysis-Lab.php">AC Circuit Analysis Lab</a></div>
+<div class="n31"><a class="nav" href="http://www.freeclassnotesonline.com/Circuit-Response-to-Time-Varying-Signals-Lab.php">Lab Experiment 1</a></div>
+<div class="n31"><a class="nav" href="http://www.freeclassnotesonline.com/Circuit-Response-to-Time-Varying-Signals-Lab-Writeup.php">Writeup for Lab 1</a></div>
+<div class="n31"><a class="nav" href="http://www.freeclassnotesonline.com/RLC-Series-and-Parallel-Circuits-Lab.php">Lab Experiment 2</a></div>
+<div class="n31"><a class="nav" href="http://www.freeclassnotesonline.com/Equivalent-Circuits-Lab.php">Lab Experiment 3</a></div>
+<div class="n21"><a class="nav" href="http://www.freeclassnotesonline.com/Electronics-Safety.php">Electronics Safety</a></div>
+<div class="n21"><a class="nav" href="http://www.freeclassnotesonline.com/Resistor-Basics.php">Resistor Basics</a></div>
+<div class="n21"><a class="nav" href="http://www.freeclassnotesonline.com/Digital-Multimeter-Basics.php">Digital Multimeter Basics</a></div>
+<div class="n11"><a class="nav" href="http://www.freeclassnotesonline.com/Electrical-Engineering-Education-Programs.php">EDUCATION</a></div>
+<div class="n11"><a class="nav" href="http://www.freeclassnotesonline.com/Electrical-Engineering-Jobs-and-Careers.php">JOBS &amp; CAREERS</a></div>
+<div class="n11"><a class="nav" href="http://www.freeclassnotesonline.com/Electrical-Engineering-Research-Initiatives.php">RESEARCH STUDIES</a></div>
+<div class="n12"><a class="nav" href="http://www.freeclassnotesonline.com/Electrical-Engineering-Clubs-and-Affiliations.php">CLUBS &amp; ORGANIZATIONS</a></div>
+
+<table border="0" cellpadding="0" cellspacing="0" align="center">
+<tbody><tr>
+<td width="150" height="1" style="background-color: #FFFFFF"></td>
+</tr>
+
+<tr>
+<td width="150" height="20" style="background-color: #DDDDDD"></td>
+</tr>
+</tbody></table>
+
+<div class="n11">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5800381116861914";
+/* 160x600nav, created 3/19/10 */
+google_ad_slot = "3737728973";
+google_ad_width = 160;
+google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/f.txt">
+</script><br>
+<center>
+<iframe src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/cm.html" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" yy85qqfdy=""></iframe>
+<br><br>
+<iframe src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/cm(1).html" style="width:120px;height:240px;" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" yy85qqfdy=""></iframe>
+</center>
+</div>
+</td>
+
+<td align="left" valign="top" width="760">
+<p><a class="t1">RLC Series and Parallel Circuits Lab</a></p>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td width="450" valign="top">
+<p><a class="t3"><b>Objective:</b><br><br>
+1. Compare measured and calculated voltages and current for a series - parallel RLC circuit at discrete frequencies.<br><br>
+2. Measure voltage amplitude and phase. <br><br>
+3. Measure current amplitude and phase (indirect). <br><br>
+4. Use PSpice to simulate and analyze a series - parallel RLC circuit at discrete frequencies and over a wide range of frequencies.</a></p><br>
+</td>
+<td width="280" valign="top" align="right">
+<br>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5800381116861914";
+/* 200x90, created 3/19/10 */
+google_ad_slot = "2796445992";
+google_ad_width = 200;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/f.txt">
+</script></td>
+</tr>
+</tbody></table>
+
+<p><a class="t3">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5800381116861914";
+/* 728x90, created 3/19/10 */
+google_ad_slot = "9846766065";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/f.txt">
+</script><br><br>
+
+<b>Procedure: </b><br>
+<img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/EET106-Lab2-Figure1.jpg" alt=""><br>
+Figure 1: Series - Parallel RLC Circuit<br><br>
+
+1. Calculate I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> and Vo for the circuit shown in Figure 1 for f = 1kHz and f = 10kHz. <br><br>
+2. Use PSpice to determine I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub>, and Vo in Figure 1 at f = 1kHz and f = 10kHz. <br><br>
+3. Construct the circuit shown in Figure 1 and measure I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> and Vo. Note, currents are measured 
+indirectly by measuring the voltage across an appropriate resistor and applying Ohm�s Law. <br><br>
+4. By inspection, estimate Vo for: <br>
+a. f = 0Hz<br>
+b. f = ∞Hz<br><br>
+5. Use PSpice to plot Vo vs. frequency (amplitude and phase) for 100Hz ≤ f ≤ 100kHz (use .AC analysis). <br><br>
+6. Measure the magnitude of Vo at f = 100Hz and f = 100kHz. Plot actual data points on PSpice plot for f = 100kHz, 1kHz, 10kHz, and 100kHz. <br><br><br>
+
+<b>Procedure &amp; Data: </b><br><br>
+1. In the given experiment of a series/parallel RLC circuit (see Figure 1) the characteristics of the voltages and currents at 
+specific and over a range of frequencies was examined using three separate techniques. First hand calculations were performed to 
+mathematically describe the circuit�s behavior at a frequency of 1kHz and 10kHz with a 4volt peek input sine wave. These calculations 
+were performed in several steps starting with the following. In determining the circuits overall and piece wise components the 
+individual and total impedance was calculated for each component of the circuit (see Table 1) using the following equations.</a></p><br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td width="30"></td>
+<td width="305" valign="top">
+<br>
+<script type="text/javascript"><!--
+google_ad_client = "pub-5800381116861914";
+/* 250x250, created 3/19/10 */
+google_ad_slot = "7331626267";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/f.txt">
+</script></td>
+<td width="450" valign="top">
+<a class="t3">
+X<sub>R</sub> = R (E.1) <br><br>
+X<sub>L</sub> = 2 π f L (E.2) <br><br>
+X<sub>C</sub> = 1 / (2 π f C) (E.3) <br><br>
+On completion of determining the circuits impedance's all voltages and currents labeled Vo, I<sub>1</sub>, I<sub>2</sub>, 
+I<sub>3,</sub> in Figure 1 were calculated using ohms law (see E.4), Kirchhoff s voltage law (KVL), Kirchhoff s current 
+law (KCL), and the current divider rule (see E.5). <br><br>
+
+V = IR (E.4) <br><br>
+I<sub>X</sub> = (R<sub>T</sub> / R<sub>X</sub>) I (E.5) <br><br>
+The characteristics of the circuit voltages and currents with respect to there specific frequencies of 1kHz and 10kHz are listed in Table 2.</a><br><br>
+</td>
+</tr>
+</tbody></table>
+
+<p><a class="t3">
+Table 1: Calculated Impedance Values for RLC Series - Parallel Circuit<br>
+<img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/EET106-Lab2-Table1.jpg" alt=""><br><br>
+
+Table 2: Calculated Voltages &amp; Currents for RLC Series - Parallel Circuit<br>
+<img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/EET106-Lab2-Table2.jpg" alt=""><br><br>
+
+2. Secondly the use of Pspice analysis was incorporated in the break down of the circuit�s characteristics. In using Pspice simulations to test and confirm 
+the calculated values it also provided several graphical plot which help in determining the over all function of the circuit (see Graph I &amp; 2). Several 
+properties of Pspice were used including that of the transient analysis (.TRAN). By using the .TRAN analysis statement Pspice incorporates a very detailed 
+differential equation solver routine that may cause initial problems within a circuit using time dependent components such as capacitors and inductors. As 
+found the capacitors and inductor had an initial effect on the circuit at time equal to zero. Thus requiring several hand calculations to determine the effects 
+of each time dependent component when time is set equal to zero (see Table 3). To solve for these initial conditions the follow equations were used. <br><br>
+
+I<sub>IC</sub> = Isin(ωt � Θ) (E.6) <br><br>
+V<sub>IC</sub> = Vsin(ωt � Θ) (E.7) <br><br>
+
+By setting time equal to zero each equation breaks down to an initial current or voltage multiplied by the sine of the phase angle. With close inspection of 
+equations (E.6) &amp; (E.7) at time equal to zero our variable omega cancels out, which may lead one to assume that frequency has no effect on initial conditions. 
+Although upon closer examination the values of the current and voltages effecting the time dependent components were originally calculated based upon the specific 
+frequency of either 1kHz or 10kHz. <br><br>
+
+Table 3: Calculated Initial Conditions on Time Dependent Variables<br>
+<img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/EET106-Lab2-Table3.jpg" alt=""><br><br>
+
+3. Third, the circuit (Figure 1) was constructed in a laboratory setting using components with a 5% error probability. The input sine wave was set using a function 
+generator at 1kHz, 10kHz and a 4volt peek waveform. The input signals frequency and voltage were then confirmed with the use of an oscilloscope. Measured data was 
+then taken with respect to the variables Vo, I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> for both frequencies. Measuring Vo was a direct measurement although for 
+the currents required an indirect approach. By measuring the voltage across R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub> and applying ohms law (E.4) the currents 
+were simply calculated for each of the Variables (see Table 4). <br><br><br>
+
+
+Table 4: Measured Voltages &amp; Currents for RLC Series - Parallel Circuit<br>
+<img src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/EET106-Lab2-Table4.jpg" alt=""><br><br>
+
+4. Once measured data was taken, Pspice computer simulations run, and hand calculations all agreed with one another the characteristics of the circuit with respect to a 
+wide range of frequencies was examined. Upon inspection of Vo vs. frequency it was predicted that as Vo approached 0Hz, the voltage across Vo would approach zero. Also 
+as the frequency of Vo approached infinity, the voltage across Vo would approach 4volts. <br><br>
+
+5. To better understanding of the characteristics of the circuit (see Figure 1) Pspice simulations were again used. Different then in Part 2 where the transient analysis 
+was invoked, in Part 5 of the experiment an AC analysis (.AC) were performed. Unlike the .TRAN analysis the AC analysis does not involve differential equations in it's 
+calculations. Rather the AC analysis uses the same approach as the hand calculations in Part 1. This approach alleviates the need for initial conditions and allows greater 
+ease to examine Vo as a frequency vs. phase angle, voltage, and current (see Graphs 3, 4, 5). <br><br>
+
+On examination of graph 3, Vo vs. frequency over a period of 100Hz - 100kHz it was confirmed that as Vo approaches 0Hz, Vo approaches zero. And as Vo approaches infinite 
+frequency, Vo stays constant with a positive magnitude of 2.775volts. In examination of Vo as frequency approaches infinity all frequency dependent components resembled one 
+of the following. <br><br>
+
+In a capacitor, as frequency increases the impedance of the capacitor gets very small and at very large frequencies the impedance of a capacitor approaches zero.</a></p><br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td width="450" valign="top">
+<p><a class="t3">X<sub>C</sub> = 1 / (2π f C) → 0 = 1 / (2π ∞ C) (E.8) <br><br>
+In an inductor, as frequency increases the impedance of the inductor gets very large and at very 
+large frequencies the impedance of an inductor approaches infinite inductance.<br><br>
+X<sub>L</sub> = 1 / (2π f L) → + ∞ = 2π ∞ L (E.9)</a></p><br>
+</td>
+<td width="280" valign="top" align="center">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5800381116861914";
+/* 200x90, created 3/19/10 */
+google_ad_slot = "2796445992";
+google_ad_width = 200;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/f.txt">
+</script></td>
+</tr>
+</tbody></table>
+
+<p><a class="t3">
+Graph 4 examines each variable Vo, I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> over a frequency range of 100Hz - 100kHz. Taking into consideration the above characteristics 
+of inductors and capacitors one can visually confirm the properties of the components. Graph 5 examines the variables Vo, I<sub>1</sub>, I<sub>2</sub>, I<sub>3</sub> over 
+the same frequency range of 100Hz - 100kHz as a function of phase angle. By comparing the individual outputs, especially that of Vo, Graph 5 very quickly confirms the over 
+all circuits characteristics. The output phase angle Vo and both phase angles of the capacitors at high frequencies (above 100kHz) all have the same phase angle of zero. As 
+for the inductor at high frequencies (above 100kHz) has a phase angle of 90deg. Therefore, the over all characteristics of the circuit is capacitive. <br><br>
+
+6. Part 6 involved a final check of Graph 3 and actual measured values of Vo at frequencies of 100Hz and 100kHz. Measurements were taken using an oscilloscope at both 
+frequencies and plotted directly on Pspice Graph 3. <br><br><br>
+
+
+<b>Conclusion &amp; Discoveries: </b><br><br>
+
+Phase shift are independent of initial conditions. Therefore, actual capacitors and inductors initial conditions may have either an initial voltage or current associated 
+with them as well as a phase shift. It was discovered that even though correcting the voltage or current of a component, the phase shift error is unable to be corrected. <br><br>
+
+At extremely high frequencies a capacitors impedance approaches zero allowing current to flow unrestricted through the element. Capacitors at very high frequencies resemble 
+a short circuit. <br><br>
+
+At extremely high frequencies an inductors impedance approaches infinite resistance allowing no current to flow through the element. So inductors at very high frequencies 
+resemble an open circuit. <br><br>
+
+The Pspice transient analysis (.TRAN) initial conditions always need to be calculated when examining the circuit�s behavior at time equal to zero. Although by examining 
+the circuits behavior after some time t &gt; 0, initial conditions become obsolete. <br><br>
+
+
+The relationship between frequency of capacitors and inductors becomes very important in examining the circuit in Figure 1. It was discovered that by incorrectly 
+calculating the current I1(I1 = E / R1 + Xc1) at frequency 1kHz the Pspice simulations and measured values all agreed within a 5% error. Although when the frequency 
+was increased to 10kHz, calculating I1 incorrectly resulted in large errors of the hand calculations when compared to Pspice simulation and measured data. By performing 
+three separate analysis of any circuit one can more accurately discover errors. <br><br>
+
+In closing, the overall effectiveness of a circuit depends greatly upon it frequency and the behavior of its frequency dependent components. So by examining any given 
+RLC circuit and knowing the input frequency and either input total voltage or current one can determine generally the characteristics of the circuit�s possible outputs.</a></p><br>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr>
+<td width="30"></td>
+<td align="left" width="440">
+<a class="t3"><b>Figures and Graphics</b></a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Data1.php">Graph 1: Input Voltage vs. Output Voltage for 1kHz</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Data2.php">Graph 2: Input Voltage vs. Output Voltage for 10kHz</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Data3.php">Graph 3: Vo vs. Frequency</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Data4.php">Graph 4: Io vs. Frequency</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Data5.php">Graph 5: Output Current / Voltage vs. Phase</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Data6.php">Graph 6: High Pass Filter Analysis</a><br>
+</td>
+
+<td align="left" valign="top" width="220">
+<a class="t3"><b>Lab Notes</b></a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Notes1.php">Lab Notes Page 1 of 5</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Notes2.php">Lab Notes Page 2 of 5</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Notes3.php">Lab Notes Page 3 of 5</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Notes4.php">Lab Notes Page 4 of 5</a><br>
+<a href="http://www.freeclassnotesonline.com/RLC-Series-Parallel-Circuits-Lab-Notes5.php">Lab Notes Page 5 of 5</a><br>
+</td>
+</tr>
+</tbody></table>
+<br>
+
+<p><a class="t3">
+Electrical Engineering lab key words: RLC series circuit, RLC parallel circuit, circuit behavior, resistor, inductor, capacitor, 
+series-parallel, voltage, current, amplitude measurement, phase measurement, PSpice analysis, discrete frequency, computer simulations, voltage, current, 
+phase, high frequency, resistance, power, work and efficiency; Ohm�s and Kirchhoff�s laws; series and parallel circuit principles. RLC circuits, equivalent 
+circuits, series-parallel DC resistive networks, sinusoidal AC voltage, phasors, average and effective values, impedance, AC series parallel 
+circuits, AC power, AC network analysis, AC network theorems, dependent sources, transformers. Network theorems applied to DC circuits: 
+source conversions, Thevenin, Norton, superposition; capacitance; magnetic circuits; inductance; transient analysis of RC and RL circuits; 
+sinusoidal waveforms; reactance and impedance; series, parallel, and series-parallel AC circuits.
+</a></p>
+</td>
+</tr>
+</tbody></table>
+
+</td>
+</tr>
+<tr><td colspan="2" width="980" height="60" align="center">
+<a class="footer" href="http://www.freeclassnotesonline.com/">Home |</a>
+<a class="footer" href="http://www.freeclassnotesonline.com/search-freeclassnotesonline.php">Search |</a>
+<a class="footer" href="http://seneea.blogspot.com/" target="_blank">Blog |</a>
+<a class="footer" href="http://www.freeclassnotesonline.com/site-map.php">Site Index |</a>
+<a class="footer" href="mailto:info@freeclassnotesonline.com">Contact Us</a><br>
+<a class="footer" href="http://www.freeclassnotesonline.com/Terms-and-Conditions-of-Use.php">Terms &amp; Conditions of Use |</a>
+<a class="footer">Copyright 2007-2010. All Rights Reserved.</a><br>
+<a class="footer_nav" href="http://www.freeclassnotesonline.com/Electrical-Engineering.php">ELECTRICAL ENGINEERING |</a>
+<a class="footer_nav" href="http://www.freeclassnotesonline.com/Business.php">BUSINESS |</a>
+<a class="footer_nav" href="http://www.freeclassnotesonline.com/Physics.php">PHYSICS |</a>
+<a class="footer_nav" href="http://www.freeclassnotesonline.com/Chemistry.php">CHEMISTRY |</a>
+<a class="footer_nav" href="http://www.freeclassnotesonline.com/Reference_Material.php">REFERENCES</a>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./RLC Series Circuit and RLC Parallel Circuit Lab_files/ga.js.download" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15399137-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</td></tr>
+<tr>
+<td colspan="2" width="980" height="5" style="background-color: #999999"></td>
+</tr>
+</tbody></table>
+
+
+</body></html>
