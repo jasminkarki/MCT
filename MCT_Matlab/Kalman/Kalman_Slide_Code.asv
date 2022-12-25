@@ -1,0 +1,114 @@
+%{
+data = readtable('Measurements.csv');
+[rows, cols ]= size(data);
+
+A= [-1/62, 0, 1/23, 0; 0, -1/90, 0, 1/30; 0, 0, -1/23, 0; 0, 0, 0, -1/30];
+B= [0.08325, 0; 0, 0.0628; 0, 0.04785; 0.031218, 0];
+H= [0.5, 0, 0, 0; 0, 0.5, 0, 0];
+U= [3; 3];
+}%
+%} 
+
+format shortG
+%% 4 Tank Problem
+step = 5;
+A1 = 28;        % cm2
+A2 = 32;        % cm2
+A3 = 28;        % cm2
+A4 = 32;        % cm2
+kc = 0.50;      % V/cm
+T1 = 62;        % s
+T2 = 90;        % s
+T3 = 23;        % s
+T4 = 30;        % s
+gamma1 = 0.7;   % dimensionless
+gamma2 = 0.6 ;  % dimensionless
+k1 = 3.33;      % cm3/Vs
+k2 = 3.35;      % cm3/Vs
+kc = 0.5;       % V/cm
+A = [-1/T1 0 A3/(A1*T3) 0; 0 -1/T2 0 A4/(A2*T4); 0 0 -1/T3 0; 0 0 0 -1/T4];
+B = [gamma1*k1/A1 0 ; 0 gamma2*k2/A2; 0 (1-gamma2)*k2/A3; (1-gamma1)*k1/A4 0];
+data = readmatrix('Measurements.xlsx');
+H = [kc 0 0 0; 0 kc 0 0];
+U  = [3; 3];
+
+X_post = [1 1 1 1]';
+P_post = 10^5*eye(4);
+%Q = 0.005 * eye(4);    % Process Noise Cov Matrix  
+%R = 14* eye(2);        % Measurement Noise Cov Matrix
+Q = 10* eye(4);
+R = 2* eye(2);
+
+
+%{
+X_post= [1; 1; 1; 1];
+P_post= 10^5*eye(4);
+Q=  10*eye(4);
+R= 2*eye(2);
+%}
+
+X_post_store= [];
+X_prior_store= [];
+P_post_store= [];
+P_prior_store= [];
+K_store= [];
+Innov_store= [];
+Residual_store= [];
+
+%% 
+
+
+for k = 1: 5
+
+    X_prior= A* X_post + B*U;
+    P_prior= A* P_post* transpose(A) + Q;  
+    Z_true = data(k,1:2)';
+    % Z_true= [data(k, "h1").h1; data(k, "h2").h2];
+    Z_est= H* X_prior;
+    Z_error= Z_true- Z_est;
+    Kalman_gain= P_prior* transpose(H)* inv(H* P_prior* transpose(H) +R);
+    X_post= X_prior + Kalman_gain* Z_error;
+    P_post= P_prior- P_prior* Kalman_gain* H;
+
+    residual= Z_true- H* X_post;
+    % Storing the information
+    
+    %{
+    X_prior_store(k, 1:4, 1)=X_prior;
+    X_post_store(k, 1:4, 1)= X_post;
+
+    P_prior_store(k, 1:4, 1:4)= P_prior;
+    P_post_store(k, 1:4, 1:4)= P_post;
+
+    K_store(k, 1:4, 1:2)= Kalman_gain;
+   
+    Innov_store(k, 1:2, 1)= Z_error;
+    
+    residual= Z_true- H* X_post;
+    Residual_store(k, 1:2, 1)= residual;
+    %}
+    X_post_store = [X_post_store X_post];
+    X_prior_store = [X_prior_store X_prior];
+    P_prior_store = [P_prior_store P_prior];
+    K_store = [K_store Kalman_gain];
+    Innov_store = [Innov_store Z_error];
+    Residual_store = [Residual_store residual];
+
+end
+
+%{
+%% 
+
+plot(X_prior_store)
+title("X prior")
+
+%% 
+plot(X_post_store)
+title("X post")
+
+%% 
+
+plot(P_prior_store)
+title("X post prior")
+legend()
+%}
